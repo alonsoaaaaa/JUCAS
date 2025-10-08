@@ -65,7 +65,7 @@ export const Join = () => {
                       className="w-full justify-start text-left h-auto py-3 border-2"
                       asChild
                     >
-                      <a href="tel:+525656585620">
+                      <a href="https://wa.me/525656585620" target="_blank" rel="noopener noreferrer">
                         <Phone className="mr-3 h-5 w-5 shrink-0" />
                         <span>+52 1 56 5658 5620</span>
                       </a>
