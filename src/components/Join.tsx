@@ -56,7 +56,7 @@ export const Join = () => {
                     >
                       <a href="mailto:contacto@jucas.org">
                         <Mail className="mr-3 h-5 w-5 shrink-0" />
-                        <span>contacto@jucas.org</span>
+                        <span>kreitos_05@outlook.com</span>
                       </a>
                     </Button>
                     
@@ -65,20 +65,20 @@ export const Join = () => {
                       className="w-full justify-start text-left h-auto py-3 border-2"
                       asChild
                     >
-                      <a href="tel:+1234567890">
+                      <a href="tel:+525656585620">
                         <Phone className="mr-3 h-5 w-5 shrink-0" />
-                        <span>+123 456 7890</span>
+                        <span>+52 1 56 5658 5620</span>
                       </a>
                     </Button>
                     
                     <div className="flex gap-3 pt-2">
                       <Button size="icon" variant="outline" className="border-2" asChild>
-                        <a href="https://instagram.com/jucas" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.facebook.com/profile.php?id=61554688630735" target="_blank" rel="noopener noreferrer">
                           <Instagram className="h-5 w-5" />
                         </a>
                       </Button>
                       <Button size="icon" variant="outline" className="border-2" asChild>
-                        <a href="https://facebook.com/jucas" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.facebook.com/profile.php?id=61554688630735" target="_blank" rel="noopener noreferrer">
                           <Facebook className="h-5 w-5" />
                         </a>
                       </Button>
