@@ -13,7 +13,7 @@ export const Footer = () => {
           </div>
           
           <p className="text-sm text-muted-foreground text-center">
-            © 2025 Jóvenes Unidos Cristianos en la Acción Social. Todos los derechos reservados.
+            © 2025 Jóvenes Unidos en Cristo en la Acción Social. Todos los derechos reservados.
           </p>
           
           <p className="text-sm text-muted-foreground">

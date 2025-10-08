@@ -37,7 +37,7 @@ export const Mission = () => {
             ?
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Somos <strong>Jóvenes Unidos Cristianos en la Acción Social</strong>, 
+            Somos <strong>Jóvenes Unidos en Cristo en la Acción Social</strong>, 
             un movimiento de fe en acción que transforma comunidades a través del servicio, 
             el amor y el compromiso con los más vulnerables.
           </p>
