@@ -88,12 +88,14 @@ export const Join = () => {
               </div>
 
               <div className="text-center pt-6">
+                <a href="https://wa.me/525656585620">
                 <Button 
                   size="lg"
                   className="text-lg px-12 py-6 shadow-xl hover:shadow-2xl transition-all duration-300"
-                >
+                  >
                   Quiero Ser Parte de JUCAS
                 </Button>
+                  </a>
               </div>
             </CardContent>
           </div>
