@@ -93,7 +93,7 @@ export const Join = () => {
                   size="lg"
                   className="text-lg px-12 py-6 shadow-xl hover:shadow-2xl transition-all duration-300"
                   >
-                  Quiero Ser Parte de JUCAS
+                  Quiero Ser Parte de JUCAS ❤️
                 </Button>
                   </a>
               </div>
