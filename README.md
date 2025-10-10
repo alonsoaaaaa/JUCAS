@@ -1,73 +1,161 @@
-# Welcome to your Lovable project
+# JUCAS Landing Page
 
-## Project info
+A responsive, accessible landing page for JUCAS (Jóvenes Unidos en Cristo en Acción Social), built with React, TypeScript, Tailwind CSS, and shadcn/ui.
 
-**URL**: https://lovable.dev/projects/9c8ca049-c58e-4e62-8d20-eeb3b2df3ddc
+## Features
 
-## How can I edit this code?
+- Section-based landing page (Navbar, Hero, Mission, Works, Impact, Join, Footer)
+- Smooth scrolling navigation
+- Theming via HSL CSS variables with dark mode support
+- Reusable UI components from shadcn/ui
+- SEO-ready meta tags and Open Graph/Twitter cards
+- Clean project structure with path aliases (`@/`)
 
-There are several ways of editing your application.
+## Tech Stack
 
-**Use Lovable**
+- Vite 5 + React 18 (SWC plugin)
+- TypeScript
+- Tailwind CSS + tailwindcss-animate
+- shadcn/ui (Radix UI)
+- React Router
+- TanStack Query
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/9c8ca049-c58e-4e62-8d20-eeb3b2df3ddc) and start prompting.
+## Quick Start
 
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+Requirements: Node.js and npm. We recommend installing Node with nvm.
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
+# Install dependencies
 npm i
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start development server (http://localhost:8080)
 npm run dev
+
+# Lint code
+npm run lint
+
+# Build for production
+npm run build
+
+# Preview a production build locally
+npm run preview
 ```
 
-**Edit a file directly in GitHub**
+## Project Structure
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```text
+src/
+  pages/
+    Index.tsx        # Composes the landing page sections
+    NotFound.tsx     # Fallback 404 page
+  components/
+    Navbar.tsx       # Fixed top navigation with smooth scroll
+    Hero.tsx         # Intro section with CTA
+    Mission.tsx      # Values/mission cards
+    Works.tsx        # Project highlights with images from src/assets
+    Impact.tsx       # Stats grid
+    Join.tsx         # Contact/CTA card
+    Footer.tsx       # Footer content
+    ui/              # shadcn/ui components
+  assets/            # Images used by Works.tsx
+  lib/utils.ts       # Utility helpers (e.g., cn)
+  index.css          # Theme tokens (HSL), dark mode, base styles
+App.tsx              # Providers, router, routes
+main.tsx             # App entry and root mount
+index.html           # Meta tags and root div
+```
 
-**Use GitHub Codespaces**
+Path alias: `@` → `./src` (configured in `vite.config.ts` and `components.json`).
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Editing Content
 
-## What technologies are used for this project?
+Most content is defined directly in the section components:
 
-This project is built with:
+- Navbar (`src/components/Navbar.tsx`)
+  - Update brand text "JUCAS"
+  - Buttons scroll to sections with IDs: `works`, `join`
+  - Mobile "Únete" button visible under md
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+- Hero (`src/components/Hero.tsx`)
+  - Headline and subcopy (Spanish strings)
+  - Primary CTA "Únete Ahora" scrolls to Join
+  - Secondary CTA "Conoce Nuestro Trabajo" scrolls to Works
+  - Background gradient and subtle scroll indicator
 
-## How can I deploy this project?
+- Mission (`src/components/Mission.tsx`)
+  - Edit the `values` array (icon, title, description)
+  - Icons come from `lucide-react` (imported at top)
 
-Simply open [Lovable](https://lovable.dev/projects/9c8ca049-c58e-4e62-8d20-eeb3b2df3ddc) and click on Share -> Publish.
+- Works (`src/components/Works.tsx`)
+  - Edit the `works` array (image, title, description)
+  - Images live in `src/assets/` and are imported at the top
+  - To add a new image:
+    1. Place the file in `src/assets/`
+    2. Import it at the top of `Works.tsx`
+    3. Add a new object to the `works` array
+  - Each `<img>` uses `alt={work.title}` for accessibility
 
-## Can I connect a custom domain to my Lovable project?
+- Impact (`src/components/Impact.tsx`)
+  - Edit the `stats` array (icon, value, label)
 
-Yes, you can!
+- Join (`src/components/Join.tsx`)
+  - Update contact details (email, WhatsApp/phone, social links)
+  - Primary CTA "Quiero Ser Parte de JUCAS" links to WhatsApp
+  - Buttons use `asChild` when wrapping anchor `<a>` elements
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+- Footer (`src/components/Footer.tsx`)
+  - Brand text and attribution message
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+## Styling and Theme
+
+- Theme tokens (HSL CSS variables) are defined in `src/index.css` under `:root` and `.dark`
+  - Key variables: `--primary`, `--secondary`, `--accent`, `--background`, `--foreground`, `--radius`, etc.
+  - Update these to adjust brand colors and border radii
+- Tailwind is configured in `tailwind.config.ts`
+  - Dark mode via `class` strategy
+  - Custom animations: `fade-in`, `accordion-down`, `accordion-up`
+  - Container defaults and extended color system mapped to CSS variables
+
+## SEO and Meta
+
+- `index.html` contains the document `<title>` and meta tags for description, author, Open Graph, and Twitter cards.
+  - Update:
+    - `<title>` and `meta[name="description"]` to match your messaging
+    - `og:image` and `twitter:image` to point to your own social preview image
+- `public/robots.txt` exists for crawler directives
+- `public/favicon.ico` and `public/placeholder.svg` can be replaced with your branding
+
+## UI Components (shadcn/ui)
+
+- shadcn/ui components live in `src/components/ui/` and are configured via `components.json`
+- To add new UI components:
+  ```sh
+  npx shadcn@latest add button card dialog ...
+  ```
+- Base color is `slate` and the project uses CSS variables for theming
+
+## Routing
+
+- Routes are defined in `src/App.tsx`
+- Add new routes above the catch‑all `"*"` route to avoid falling through to `NotFound`
+
+## Accessibility
+
+- Maintain descriptive `alt` text for images
+- Ensure sufficient color contrast when adjusting theme variables
+- Keep interactive elements (buttons/links) keyboard-accessible and focus-visible
+
+## Deployment
+
+- Standard Vite build:
+  ```sh
+  npm run build
+  npm run preview
+  ```
+- If using Lovable hosting, open your project and use Share → Publish.
+
+## Notes
+
+- Dev server runs on port `8080` (IPv6 enabled)
+- Path imports use the `@/` alias for clarity
+- Linting is configured via `eslint.config.js`
