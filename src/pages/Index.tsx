@@ -4,6 +4,7 @@ import { Mission } from "@/components/Mission";
 import { Works } from "@/components/Works";
 import { Impact } from "@/components/Impact";
 import { Join } from "@/components/Join";
+import { Conocenos } from "@/components/Conocenos";
 import { Footer } from "@/components/Footer";
 
 const Index = () => {
@@ -16,6 +17,7 @@ const Index = () => {
         <Works />
         <Impact />
         <Join />
+        <Conocenos />
       </main>
       <Footer />
     </div>
