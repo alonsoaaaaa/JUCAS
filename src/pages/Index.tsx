@@ -17,7 +17,7 @@ const Index = () => {
         <Works />
         <Impact />
         <Join />
-        <Conocenos />
+        {/* <Conocenos /> */}
       </main>
       <Footer />
     </div>
