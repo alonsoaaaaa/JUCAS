@@ -1,29 +1,29 @@
 import { Card, CardContent } from "@/components/ui/card";
 import communityWork from "@/assets/community-work.jpeg";
 import procession from "@/assets/procession.jpeg";
-import foodService from "@/assets/food-service.jpg";
-import childrenEducation from "@/assets/children-education.jpeg";
+import foodService from "@/assets/food-service.png";
+import childrenEducation from "@/assets/children-education.jpg";
 
 const works = [
   {
     image: communityWork,
     title: "Construcción Comunitaria",
-    description: "Trabajamos junto a las comunidades en proyectos de construcción y mejora de espacios, poniendo la fe en acción con nuestras propias manos."
+    description: "Trabajamos junto a las comunidades en proyectos de construcción como el de la capilla de San Martin de Porres, brindando un espacio de encuentro y fe."
   },
   {
     image: procession,
     title: "Celebración de Fe",
-    description: "Organizamos y participamos en eventos religiosos que fortalecen la comunidad y mantienen vivas nuestras tradiciones cristianas."
+    description: "Organizamos y participamos en eventos que fortalecen la fe y la unión comunitaria, como procesiones y fiestas patronales."
   },
   {
     image: foodService,
     title: "Alimentación Solidaria",
-    description: "Servimos comida caliente a personas en situación de calle, brindando no solo alimento sino también dignidad y esperanza."
+    description: "Servimos comida caliente en accidentes como el de la pipa de gas en Iztapalapa. Proveemos alimentos a personas en situación de calle y comunidades vulnerables."
   },
   {
     image: childrenEducation,
     title: "Educación y Niñez",
-    description: "Acompañamos a niños en situación vulnerable a través de programas educativos, recreativos y de formación en valores."
+    description: "Visitamos orfanatos para apoyar a niños en situación de vulnerabilidad."
   }
 ];
 
