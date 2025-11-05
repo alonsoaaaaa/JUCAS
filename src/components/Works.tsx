@@ -2,7 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import communityWork from "@/assets/community-work.jpeg";
 import procession from "@/assets/procession.jpeg";
 import foodService from "@/assets/food-service.png";
-import childrenEducation from "@/assets/children-education.jpg";
+import childrenEducation from "@/assets/children_education.jpg";
 
 const works = [
   {
