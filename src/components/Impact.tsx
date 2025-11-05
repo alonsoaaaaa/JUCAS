@@ -3,22 +3,22 @@ import { Users, Heart, Calendar, MapPin } from "lucide-react";
 const stats = [
   {
     icon: Users,
-    value: "500+",
+    value: "5",
     label: "Voluntarios Activos"
   },
   {
     icon: Heart,
-    value: "2000+",
+    value: "200+",
     label: "Personas Ayudadas"
   },
   {
     icon: Calendar,
-    value: "50+",
+    value: "10+",
     label: "Proyectos Realizados"
   },
   {
     icon: MapPin,
-    value: "15+",
+    value: "2",
     label: "Comunidades Alcanzadas"
   }
 ];
