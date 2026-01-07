@@ -73,12 +73,12 @@ export const Join = () => {
                     
                     <div className="flex gap-3 pt-2">
                       <Button size="icon" variant="outline" className="border-2" asChild>
-                        <a href="https://www.facebook.com/profile.php?id=61554688630735" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.facebook.com/profile.php?id=61574061490623" target="_blank" rel="noopener noreferrer">
                           <Instagram className="h-5 w-5" />
                         </a>
                       </Button>
                       <Button size="icon" variant="outline" className="border-2" asChild>
-                        <a href="https://www.facebook.com/profile.php?id=61554688630735" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.facebook.com/profile.php?id=61574061490623" target="_blank" rel="noopener noreferrer">
                           <Facebook className="h-5 w-5" />
                         </a>
                       </Button>
